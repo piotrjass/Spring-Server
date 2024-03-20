@@ -10,15 +10,20 @@ public class DrugService {
 
     @Autowired
     private DrugRepository drugRepository;
-
     public String addNewDrug(DrugDto drugDto) {
         Drug newDrug = new Drug();
-        newDrug.setSynonyms(drugDto.getSynonyms());
-        newDrug.setPartOfADay(drugDto.getPartOfADay());
         newDrug.setName(drugDto.getName());
+        newDrug.setTime(drugDto.getTime());
         newDrug.setMaxDosage(drugDto.getMaxDosage());
-        newDrug.setIndications(drugDto.getIndications());
+        newDrug.setSynonym(drugDto.getSynonym());
         newDrug.setDosage(drugDto.getDosage());
+        newDrug.setMeal(drugDto.getMeal());
+        newDrug.setEffect(drugDto.getEffect());
+        newDrug.setMechanism(drugDto.getMechanism());
+        newDrug.setIndication(drugDto.getIndication());
+        newDrug.setContraindication(drugDto.getContraindication());
+        newDrug.setForm(drugDto.getForm());
+
         drugRepository.save(newDrug);
         return "Saved";
     }

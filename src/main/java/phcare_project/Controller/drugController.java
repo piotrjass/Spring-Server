@@ -7,23 +7,18 @@ import phcare_project.dto.DrugDto;
 import phcare_project.entity.Drug;
 import phcare_project.entity.User;
 import phcare_project.repository.DrugRepository;
+import phcare_project.service.DrugService;
 
 @Controller
 @RequestMapping(path="/drug")
 public class drugController {
 @Autowired
     private DrugRepository drugRepository;
-
-    @GetMapping(path="/all")
-    public @ResponseBody Iterable<Drug> getAllDrugs() {
-        return drugRepository.findAll();
+    @Autowired
+private DrugService drugService;
+    @PostMapping(path="/add")
+    public @ResponseBody String addNewDrug(@RequestBody DrugDto drugDTO) {
+        return drugService.addNewDrug(drugDTO); // Call the service method
     }
-@PostMapping(path="/add")
-public @ResponseBody String addNewDrug(@RequestBody DrugDto drugDTO) {
-    Drug newDrug = new Drug();
-    newDrug.setName(drugDTO.getName());
-    newDrug.setMaxDosage(drugDTO.getMaxDosage());
-    drugRepository.save(newDrug);
-    return "Saved";}
 
 }

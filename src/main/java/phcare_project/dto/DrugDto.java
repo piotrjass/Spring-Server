@@ -1,36 +1,99 @@
 package phcare_project.dto;
 
 public class DrugDto {
-    private String synonyms;
-    private String partOfADay;
-    private String nameOfaDrug;
+
+    private String time;
+    private String name;
+
+    private String synonym;
+
+    public String getSynonym() {
+        return synonym;
+    }
+
+    public void setSynonym(String synonym) {
+        this.synonym = synonym;
+    }
+
     private int maxDosage;
-    private String indications;
-    private String groupName;
     private String dosage;
+    private String meal;
+    private String effect;
+    private String mechanism;
+    private String indication;
+    private String contraindication;
+    private String form;
 
-    public String getSynonyms() {
-        return synonyms;
+    public String getDosage() {
+        return dosage;
     }
 
-    public void setSynonyms(String synonyms) {
-        this.synonyms = synonyms;
+    public void setDosage(String dosage) {
+        this.dosage = dosage;
     }
 
-    public String getPartOfADay() {
-        return partOfADay;
+    public String getMeal() {
+        return meal;
     }
 
-    public void setPartOfADay(String partOfADay) {
-        this.partOfADay = partOfADay;
+    public void setMeal(String meal) {
+        this.meal = meal;
+    }
+
+    public String getEffect() {
+        return effect;
+    }
+
+    public void setEffect(String effect) {
+        this.effect = effect;
+    }
+
+    public String getMechanism() {
+        return mechanism;
+    }
+
+    public void setMechanism(String mechanism) {
+        this.mechanism = mechanism;
+    }
+
+    public String getIndication() {
+        return indication;
+    }
+
+    public void setIndication(String indication) {
+        this.indication = indication;
+    }
+
+    public String getContraindication() {
+        return contraindication;
+    }
+
+    public void setContraindication(String contraindication) {
+        this.contraindication = contraindication;
+    }
+
+    public String getForm() {
+        return form;
+    }
+
+    public void setForm(String form) {
+        this.form = form;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getName() {
-        return nameOfaDrug;
+        return name;
     }
 
     public void setName(String name) {
-        this.nameOfaDrug = name;
+        this.name = name;
     }
 
     public int getMaxDosage() {
@@ -41,27 +104,5 @@ public class DrugDto {
         this.maxDosage = maxDosage;
     }
 
-    public String getIndications() {
-        return indications;
-    }
 
-    public void setIndications(String indications) {
-        this.indications = indications;
-    }
-
-    public String getGroupName() {
-        return groupName;
-    }
-
-    public void setGroupName(String groupName) {
-        this.groupName = groupName;
-    }
-
-    public String getDosage() {
-        return dosage;
-    }
-
-    public void setDosage(String dosage) {
-        this.dosage = dosage;
-    }
 }

@@ -13,8 +13,6 @@ public class DiseaseService {
     public String addNewDisease(DiseaseDto diseaseDto) {
         Disease newDisease = new Disease();
         newDisease.setName(diseaseDto.getName());
-        newDisease.setATC(diseaseDto.getATC());
-        newDisease.setChronic(diseaseDto.getChronic());
 
         diseaseRepository.save(newDisease);
         return "Saved";

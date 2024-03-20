@@ -8,68 +8,100 @@ public class Drug {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
-    @Column(name = "synonims")
-    private String synonyms;
-    @Column(name = "partOfADay")
-    private String partOfADay;
     @Column(name = "name")
     private String name;
-    @Column(name = "maxDosage")
-    private int maxDosage;
-    @Column(name = "indications")
-    private String indications;
-    @Column(name = "groupName")
-    private String group;
-    @Column(name = "dosage")
+    @Column(name = "time")
+    private String time;
 
+    @Column(name = "max_dosage")
+    private int maxDosage;
+
+    @Column(name = "dosage")
     private String dosage;
 
-    public String getSynonyms() {
-        return synonyms;
+    @Column(name = "meal")
+    private String meal;
+
+    @Column(name = "effect")
+    private String effect;
+
+    @Column(name = "mechanism")
+    private String mechanism;
+
+    @Column(name = "indication")
+    private String indication;
+
+    @Column(name = "contraindication")
+    private String contraindication;
+
+    @Column(name = "form")
+    private String form;
+
+    @Column(name="synonym")
+    private String synonym;
+
+    public String getSynonym() {
+        return synonym;
     }
 
-    public void setSynonyms(String synonyms) {
-        this.synonyms = synonyms;
+    public void setSynonym(String synonym) {
+        this.synonym = synonym;
     }
 
-    public String getPartOfADay() {
-        return partOfADay;
+    public String getDosage() {
+        return dosage;
     }
 
-    public void setPartOfADay(String partOfADay) {
-        this.partOfADay = partOfADay;
+    public void setDosage(String dosage) {
+        this.dosage = dosage;
     }
 
-    public String getName() {
-        return name;
+    public String getMeal() {
+        return meal;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMeal(String meal) {
+        this.meal = meal;
     }
 
-    public int getMaxDosage() {
-        return maxDosage;
+    public String getEffect() {
+        return effect;
     }
 
-    public void setMaxDosage(int maxDosage) {
-        this.maxDosage = maxDosage;
+    public void setEffect(String effect) {
+        this.effect = effect;
     }
 
-    public String getIndications() {
-        return indications;
+    public String getMechanism() {
+        return mechanism;
     }
 
-    public void setIndications(String indications) {
-        this.indications = indications;
+    public void setMechanism(String mechanism) {
+        this.mechanism = mechanism;
     }
 
-    public String getGroup() {
-        return group;
+    public String getIndication() {
+        return indication;
     }
 
-    public void setGroupName(String group) {
-        this.group = group;
+    public void setIndication(String indication) {
+        this.indication = indication;
+    }
+
+    public String getContraindication() {
+        return contraindication;
+    }
+
+    public void setContraindication(String contraindication) {
+        this.contraindication = contraindication;
+    }
+
+    public String getForm() {
+        return form;
+    }
+
+    public void setForm(String form) {
+        this.form = form;
     }
 
     public int getId() {
@@ -80,11 +112,27 @@ public class Drug {
         this.id = id;
     }
 
-    public String getDosage() {
-        return dosage;
+    public String getName() {
+        return name;
     }
 
-    public void setDosage(String dosage) {
-        this.dosage = dosage;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public int getMaxDosage() {
+        return maxDosage;
+    }
+
+    public void setMaxDosage(int maxDosage) {
+        this.maxDosage = maxDosage;
     }
 }
