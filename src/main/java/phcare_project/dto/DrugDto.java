@@ -6,15 +6,6 @@ public class DrugDto {
     private String name;
 
     private String synonym;
-
-    public String getSynonym() {
-        return synonym;
-    }
-
-    public void setSynonym(String synonym) {
-        this.synonym = synonym;
-    }
-
     private int maxDosage;
     private String dosage;
     private String meal;
@@ -23,6 +14,14 @@ public class DrugDto {
     private String indication;
     private String contraindication;
     private String form;
+    public String getSynonym() {
+        return synonym;
+    }
+
+    public void setSynonym(String synonym) {
+        this.synonym = synonym;
+    }
+
 
     public String getDosage() {
         return dosage;

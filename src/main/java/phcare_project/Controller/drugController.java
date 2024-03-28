@@ -15,10 +15,10 @@ public class drugController {
 @Autowired
     private DrugRepository drugRepository;
     @Autowired
-private DrugService drugService;
+    private DrugService drugService;
     @PostMapping(path="/add")
     public @ResponseBody String addNewDrug(@RequestBody DrugDto drugDTO) {
-        return drugService.addNewDrug(drugDTO); // Call the service method
+        return drugService.addNewDrug(drugDTO);
     }
 
 }
