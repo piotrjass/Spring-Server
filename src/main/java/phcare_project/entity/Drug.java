@@ -3,7 +3,7 @@ package phcare_project.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "drugs")
+@Table(name = "description")
 public class Drug {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)

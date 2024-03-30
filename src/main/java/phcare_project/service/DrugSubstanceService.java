@@ -2,24 +2,20 @@ package phcare_project.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import phcare_project.dto.DrugSubstancesDto;
+import phcare_project.dto.SynonymDto;
 import phcare_project.entity.DrugSubstances;
-import phcare_project.entity.Product;
-import phcare_project.repository.DrugSubstancesRepository;
+import phcare_project.repository.synonymsRepository;
 
 @Service
 public class DrugSubstanceService {
     @Autowired
-    private DrugSubstancesRepository drugSubstancesRepository;
+    private synonymsRepository drugSubstancesRepository;
 
 
-    public String addNewDrugSubstance(DrugSubstancesDto drugSubstancesDto){
+    public String addNewDrugSubstance(SynonymDto drugSubstancesDto){
         DrugSubstances newDrugSubstance = new DrugSubstances();
-        newDrugSubstance.setSubstance_id(drugSubstancesDto.getSubstance_id());
         newDrugSubstance.setName(drugSubstancesDto.getName());
         drugSubstancesRepository.save(newDrugSubstance);
-        return "Saved!";
+        return "Saved! /Service";
     }
 }

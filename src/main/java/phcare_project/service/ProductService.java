@@ -14,6 +14,11 @@ public class ProductService {
     public String addNewProduct(ProductDto productDto){
         Product newProduct = new Product();
         newProduct.setName(productDto.getName());
+        newProduct.setIngredient1(productDto.getIngredient1());
+        newProduct.setIngredient2(productDto.getIngredient2());
+        newProduct.setIngredient3(productDto.getIngredient3());
+        newProduct.setIngredient4(productDto.getIngredient4());
+        newProduct.setIngredient5(productDto.getIngredient5());
         productRepository.save(newProduct);
         return "Saved /Service";
     }
