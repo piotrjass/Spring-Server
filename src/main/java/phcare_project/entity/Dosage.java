@@ -1,17 +1,19 @@
 package phcare_project.entity;
 
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "dosage")
 public class Dosage {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private int id;
+
     @Column(name = "name")
     private String name;
-    @Column(name = "product_i")
+    @Column(name = "product_id")
     private int product_id;
     @Column(name = "substance_id")
     private int substance_id;

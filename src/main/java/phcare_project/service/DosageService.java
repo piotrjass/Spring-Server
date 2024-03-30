@@ -15,6 +15,7 @@ public class DosageService {
     public String addNewDosage(DosageDto dosageDto) {
         Dosage newDosage = new Dosage();
         newDosage.setName(dosageDto.getName());
+        newDosage.setProduct_id(dosageDto.getProduct_id());
         newDosage.setSubstance_id(dosageDto.getSubstance_id());
         newDosage.setDosage_amount(dosageDto.getDosage_amount());
         dosageRepository.save(newDosage);

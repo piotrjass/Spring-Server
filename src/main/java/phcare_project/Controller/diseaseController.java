@@ -21,11 +21,10 @@ public class diseaseController {
     @PostMapping(path="/add")
     public @ResponseBody String addNewDisease(@RequestBody DiseaseDto diseaseDto) {
         return diseaseService.addNewDisease(diseaseDto);
-
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Disease> getAllDrugs() {
+    public @ResponseBody Iterable<Disease> getAllDiseases() {
         return diseaseRepository.findAll();
     }
 

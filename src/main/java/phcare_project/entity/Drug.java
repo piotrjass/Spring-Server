@@ -14,7 +14,7 @@ public class Drug {
     private String time;
 
     @Column(name = "max_dosage")
-    private int maxDosage;
+    private Integer maxDosage;
 
     @Column(name = "dosage")
     private String dosage;
@@ -104,7 +104,7 @@ public class Drug {
         this.form = form;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -128,7 +128,7 @@ public class Drug {
         this.time = time;
     }
 
-    public int getMaxDosage() {
+    public Integer getMaxDosage() {
         return maxDosage;
     }
 

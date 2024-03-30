@@ -14,7 +14,7 @@ public class DrugSubstances {
     @Column(name = "name")
     private String name;
     @Column(name = "substance_id")
-    private int substance_id;
+    private Integer substance_id;
 
     public String getName() {
         return name;
@@ -24,7 +24,7 @@ public class DrugSubstances {
         this.name = name;
     }
 
-    public int getSubstance_id() {
+    public Integer getSubstance_id() {
         return substance_id;
     }
 
