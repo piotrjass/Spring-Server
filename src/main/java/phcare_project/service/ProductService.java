@@ -34,9 +34,10 @@ public class ProductService {
         return "Saved /Service";
     }
 
-    public List<String> getIngredientsList(Product product) {
+    public List<Drug> getIngredientsList(Product product) {
         List<String> ingredients = new ArrayList<>();
         List<String> formattedIngredients = new ArrayList<>();
+        List<Drug> drugs = new ArrayList<>();
         ingredients.add(product.getIngredient1());
         ingredients.add(product.getIngredient2());
         ingredients.add(product.getIngredient3());
@@ -53,14 +54,13 @@ public class ProductService {
             String drugUrl = "http://localhost:8080/drug/" + ing;
             try {
                 Drug drugInfo = restTemplate.getForObject(drugUrl, Drug.class);
-                System.out.println("Information for " + ing + ":");
-                System.out.println(drugInfo);
+                drugs.add(drugInfo);
             } catch (RestClientResponseException e) {
                 System.out.println("Error retrieving information for " + ing + ": " + e.getMessage());
             }
         }
 
-        return formattedIngredients;
+        return drugs;
     }
 
 
@@ -76,5 +76,7 @@ public class ProductService {
         }
         return ingredient;
     }
+
+
 
 }

@@ -11,6 +11,8 @@
     import phcare_project.repository.ProductRepository;
     import phcare_project.service.ProductService;
 
+    import java.util.List;
+
     @Controller
     @RequestMapping("/product")
     public class productController {
@@ -30,10 +32,12 @@
         }
 
         @GetMapping(path = "/details/{productName}")
-        public @ResponseBody Product getSingleProductDetails(@PathVariable String productName) {
+        public @ResponseBody List<Drug> getSingleProductDetails(@PathVariable String productName) {
             Product product = productService.getSingleProduct(productName);
             productService.getIngredientsList(product);
-            return productService.getSingleProduct(productName);
+            return  productService.getIngredientsList(product);
+//            return productService.getSingleProduct(productName);
+
         }
 
         @PostMapping("/add")
