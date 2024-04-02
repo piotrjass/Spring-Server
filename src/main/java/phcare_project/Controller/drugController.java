@@ -23,6 +23,11 @@ public class drugController {
         return drugRepository.findAll();
     }
 
+    @GetMapping(path = "/{activeIngredient}")
+    public @ResponseBody Drug getDrugByActiveIngredient(@PathVariable String activeIngredient) {
+        return drugService.getDrugByActiveIngredient(activeIngredient);
+    }
+
     @PostMapping(path="/add")
     public @ResponseBody String addNewDrug(@RequestBody DrugDto drugDTO) {
         return drugService.addNewDrug(drugDTO);

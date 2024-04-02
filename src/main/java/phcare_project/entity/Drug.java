@@ -135,4 +135,22 @@ public class Drug {
     public void setMaxDosage(int maxDosage) {
         this.maxDosage = maxDosage;
     }
+
+    @Override
+    public String toString() {
+        return "Drug{" +
+                "name='" + name + '\'' +
+                ", time='" + time + '\'' +
+                ", maxDosage=" + maxDosage +
+                ", dosage='" + dosage + '\'' +
+                ", meal='" + meal + '\'' +
+                ", effect='" + effect + '\'' +
+                ", mechanism='" + mechanism + '\'' +
+                ", indication='" + indication + '\'' +
+                ", contraindication='" + contraindication + '\'' +
+                ", form='" + form + '\'' +
+                ", synonym='" + synonym + '\'' +
+                '}';
+    }
+
 }

@@ -10,6 +10,11 @@ public class DrugService {
 
     @Autowired
     private DrugRepository drugRepository;
+
+    public Drug getDrugByActiveIngredient(String activeIngredient) {
+
+        return drugRepository.findByName(activeIngredient);
+    }
     public String addNewDrug(DrugDto drugDto) {
         Drug newDrug = new Drug();
         newDrug.setName(drugDto.getName());
