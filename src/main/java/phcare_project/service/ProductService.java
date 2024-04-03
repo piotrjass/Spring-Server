@@ -22,7 +22,8 @@ public class ProductService {
     public Product getSingleProduct(String productName) {
         return productRepository.findByName(productName);
     }
-    public String addNewProduct(ProductDto productDto){
+
+    public String addNewProduct(ProductDto productDto) {
         Product newProduct = new Product();
         newProduct.setName(productDto.getName());
         newProduct.setIngredient1(productDto.getIngredient1());
@@ -50,7 +51,7 @@ public class ProductService {
         }
 
         RestTemplate restTemplate = new RestTemplate();
-        for(String ing: formattedIngredients){
+        for (String ing : formattedIngredients) {
             String drugUrl = "http://localhost:8080/drug/" + ing;
             try {
                 Drug drugInfo = restTemplate.getForObject(drugUrl, Drug.class);
@@ -59,10 +60,8 @@ public class ProductService {
                 System.out.println("Error retrieving information for " + ing + ": " + e.getMessage());
             }
         }
-
         return drugs;
     }
-
 
 
     private static String formatIngredient(String ingredient) {
@@ -76,7 +75,6 @@ public class ProductService {
         }
         return ingredient;
     }
-
 
 
 }
